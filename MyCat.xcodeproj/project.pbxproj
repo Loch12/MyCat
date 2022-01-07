@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F0DDB352786403000385119 /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DDB342786403000385119 /* CatData.swift */; };
+		2F23329B278805AF007AE0A5 /* CatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F23329A278805AF007AE0A5 /* CatManager.swift */; };
 		2F7F2BC827878491002489C0 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7F2BC627878490002489C0 /* CatTableViewCell.swift */; };
 		2F7F2BC927878491002489C0 /* CatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7F2BC727878490002489C0 /* CatTableViewCell.xib */; };
 		2FC6EB3D27863DCA00E7EC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC6EB3C27863DCA00E7EC87 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		2F0DDB342786403000385119 /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
+		2F23329A278805AF007AE0A5 /* CatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatManager.swift; sourceTree = "<group>"; };
 		2F7F2BC627878490002489C0 /* CatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
 		2F7F2BC727878490002489C0 /* CatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatTableViewCell.xib; sourceTree = "<group>"; };
 		2FC6EB3927863DCA00E7EC87 /* MyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				2F7F2BC627878490002489C0 /* CatTableViewCell.swift */,
 				2F7F2BC727878490002489C0 /* CatTableViewCell.xib */,
 				2F0DDB342786403000385119 /* CatData.swift */,
+				2F23329A278805AF007AE0A5 /* CatManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				2FC6EB3D27863DCA00E7EC87 /* AppDelegate.swift in Sources */,
 				2FC6EB3F27863DCA00E7EC87 /* SceneDelegate.swift in Sources */,
 				2F7F2BC827878491002489C0 /* CatTableViewCell.swift in Sources */,
+				2F23329B278805AF007AE0A5 /* CatManager.swift in Sources */,
 				2FD5C62327873F6000277B2A /* CatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

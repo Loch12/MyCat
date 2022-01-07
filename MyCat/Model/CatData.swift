@@ -5,6 +5,8 @@
 //  Created by Matheus on 05/01/22.
 //
 
+//Estrutura que receberá o JSON através do request do AlamoFire
+
 import Foundation
 
 struct CatData: Decodable {
