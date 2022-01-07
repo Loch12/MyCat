@@ -15,13 +15,12 @@ class ViewController: UIViewController {
     
     private var cats: [CatData] = []
     
-    private var url = "https://api.thecatapi.com/v1/breeds"
+    private var url = "https://api.thecatapi.com/v1/breeds?api_key=842c54ee-add1-4eab-9747-f2fd69603dde"
     
     @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         self.tableView.delegate = self
         self.tableView.dataSource = self

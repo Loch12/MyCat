@@ -21,8 +21,4 @@ class CatTableViewCell: UITableViewCell {
         super.awakeFromNib()
         catNameLabel.layer.cornerRadius = catNameLabel.frame.size.height / 5
     }
-    
-    
-    
-    
 }
