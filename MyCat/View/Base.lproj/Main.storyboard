@@ -38,18 +38,18 @@
                                                 <color key="textColor" red="0.85882352939999995" green="0.96078431369999995" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBq-bY-y9C">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yBq-bY-y9C">
                                                 <rect key="frame" x="0.0" y="60" width="408" height="150"/>
                                                 <color key="backgroundColor" red="0.2156862745" green="0.74509803919999995" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="W6z-K7-1bO"/>
-                                                    <constraint firstAttribute="height" constant="150" id="wwZ-G3-Yus"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="W6z-K7-1bO" userLabel="height ≥ 130"/>
+                                                    <constraint firstAttribute="height" constant="150" id="wwZ-G3-Yus" userLabel="height = 130"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                                 <color key="textColor" red="0.85882352939999995" green="0.96078431369999995" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-Do-eNp">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperamento" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-Do-eNp">
                                                 <rect key="frame" x="0.0" y="220" width="408" height="100"/>
                                                 <color key="backgroundColor" red="0.2156862745" green="0.74509803919999995" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
