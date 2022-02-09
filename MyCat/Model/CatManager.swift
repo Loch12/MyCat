@@ -8,7 +8,6 @@
 import Foundation
 
 protocol CatManagerDelegate {
-    func didUpdateCat(_ catManager: CatManager, cat: CatData)
     func loadImage(cat: CatData)
 }
 struct CatManager {
