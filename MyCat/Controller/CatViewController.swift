@@ -10,46 +10,46 @@ import SDWebImage
 
 class CatViewController: UIViewController {
 
-    var cat: CatData!
-    var catManager = CatManager()
-    
-    @IBOutlet weak var catNameLabel: UILabel!
-    @IBOutlet weak var catDescriptionLabel: UILabel!
-    @IBOutlet weak var catTempLabel: UILabel!
-    @IBOutlet weak var catImageView: UIImageView!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        catManager.delegate = self
-        
-        catNameLabel.text = cat.name
-        catTempLabel.text = "Temperamento: "+(cat.temperament)
-        catDescriptionLabel.text = cat.description
-        
-        catNameLabel.layer.cornerRadius = catNameLabel.frame.size.height / 5
-        catDescriptionLabel.layer.cornerRadius = catDescriptionLabel.frame.size.height / 5
-        catTempLabel.layer.cornerRadius = catTempLabel.frame.size.height / 3
-        
-        loadImage(cat: self.cat)
-    }
-    
- 
+  @IBOutlet weak var catNameLabel: UILabel!
+  @IBOutlet weak var catDescriptionLabel: UILabel!
+  @IBOutlet weak var catTempLabel: UILabel!
+  @IBOutlet weak var catImageView: UIImageView!
+
+//MARK: - Properties
+  var cat: CatData!
+  var catManager = CatManager()
+
+//MARK: - Override Methods
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    catManager.delegate = self
+    loadImage(cat: self.cat)
+    setLayout()
+  }
+
+//MARK: - Methods
+  func setLayout() {
+    catNameLabel.text = cat.name
+    catTempLabel.text = "Temperamento: "+(cat.temperament)
+    catDescriptionLabel.text = cat.description
+
+    catNameLabel.layer.cornerRadius = catNameLabel.frame.size.height / 5
+    catDescriptionLabel.layer.cornerRadius = catDescriptionLabel.frame.size.height / 5
+    catTempLabel.layer.cornerRadius = catTempLabel.frame.size.height / 3
+  }
 
 }
 
 //MARK: -- CatManagerDelegate
-
 extension CatViewController: CatManagerDelegate {
-    func loadImage(cat: CatData) {
-        if let urlString = self.cat.image?.url{
-            if let url = URL(string: urlString){
-                let placeholder = UIImage(named: "catImage")
-                self.catImageView.sd_setImage(with: url, placeholderImage: placeholder, options: [])
-            }
-        }
+  func loadImage(cat: CatData) {
+    if let urlString = self.cat.image?.url{
+      if let url = URL(string: urlString){
+        let placeholder = UIImage(named: "catImage")
+        self.catImageView.sd_setImage(with: url, placeholderImage: placeholder, options: [])
+      }
+    } else {
+      self.catImageView.image = UIImage(named: Setup.defaultImage)
     }
-    
-    
+  }
 }
