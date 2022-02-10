@@ -40,13 +40,9 @@ class ViewController: UIViewController {
 //MARK: -- UITableViewDelegate
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: Setup.showDetails, sender: self)
-
-  }
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let destination = segue.destination as? CatViewController{
-      destination.cat = cats[(tableView.indexPathForSelectedRow?.row)!]
+    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Setup.CatViewController) as? CatViewController {
+      vc.cat = cats[indexPath.row]
+      present(vc, animated: false, completion: nil)
     }
   }
 }

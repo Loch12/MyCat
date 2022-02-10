@@ -10,7 +10,8 @@ import Alamofire
 
 class Requests {
   static func makeRequest(completion: @escaping ([CatData]) -> Void) {
-    AF.request(Setup.apiURL , method: .get).responseDecodable(of: [CatData].self) { response in
+    let url = Routes.getAPIUrl(requestRoute: Routes.APIRoutes.breeds)
+    AF.request(url , method: .get).responseDecodable(of: [CatData].self) { response in
       if let data = response.value {
         completion(data)
       }

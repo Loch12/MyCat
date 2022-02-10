@@ -8,6 +8,8 @@
 import Foundation
 
 struct Setup {
-    static let CatTableViewCell = "CatTableViewCell"
-    static let showDetails = "showDetails"
+  static let CatTableViewCell = "CatTableViewCell"
+  static let showDetails = "showDetails"
+  static let defaultImage = "default-cat"
+  static let CatViewController = "CatViewController"
 }

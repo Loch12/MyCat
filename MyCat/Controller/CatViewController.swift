@@ -23,9 +23,8 @@ class CatViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     catManager.delegate = self
-    setLayout()
     loadImage(cat: self.cat)
-
+    setLayout()
   }
 
 //MARK: - Methods
@@ -42,7 +41,6 @@ class CatViewController: UIViewController {
 }
 
 //MARK: -- CatManagerDelegate
-
 extension CatViewController: CatManagerDelegate {
   func loadImage(cat: CatData) {
     if let urlString = self.cat.image?.url{
@@ -50,6 +48,8 @@ extension CatViewController: CatManagerDelegate {
         let placeholder = UIImage(named: "catImage")
         self.catImageView.sd_setImage(with: url, placeholderImage: placeholder, options: [])
       }
+    } else {
+      self.catImageView.image = UIImage(named: Setup.defaultImage)
     }
   }
 }
