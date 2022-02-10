@@ -22,7 +22,6 @@ class CatViewController: UIViewController {
 //MARK: - Override Methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    print(cat)
     catManager.delegate = self
     setLayout()
     loadImage(cat: self.cat)
