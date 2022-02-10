@@ -28,15 +28,12 @@ class ViewController: UIViewController {
   }
 
   //MARK: - Methods
-
   private func fetchData() {
-    let url = Routes.getAPIUrl(requestRoute: Routes.APIRoutes.breeds)
-    AF.request(url , method: .get).responseDecodable(of: [CatData].self) { [weak self] response in
-      self?.cats = response.value ?? []
+    Requests.makeRequest { [weak self] response in
+      self?.cats = response
       self?.tableView.reloadData()
     }
   }
-
 }
 
 

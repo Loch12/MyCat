@@ -79,11 +79,10 @@
 		2FC6EB3B27863DCA00E7EC87 /* MyCat */ = {
 			isa = PBXGroup;
 			children = (
-				465F4DC827B4658500B10E04 /* Routes */,
-				465F4DC527B4551300B10E04 /* Requests */,
 				2FC6EB3C27863DCA00E7EC87 /* AppDelegate.swift */,
 				2FC6EB3E27863DCA00E7EC87 /* SceneDelegate.swift */,
 				463BFD1527B0522400ACA9F9 /* Setup.swift */,
+				465F4DC527B4551300B10E04 /* Requests */,
 				2FD5C61D278737D200277B2A /* Model */,
 				2FD5C61B278737CB00277B2A /* View */,
 				2FD5C61F278737D800277B2A /* Controller */,
@@ -133,6 +132,7 @@
 		465F4DC527B4551300B10E04 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				465F4DC827B4658500B10E04 /* Routes */,
 				465F4DC627B4552A00B10E04 /* Requests.swift */,
 			);
 			path = Requests;
