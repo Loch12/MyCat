@@ -10,20 +10,20 @@ import SDWebImage
 
 class ViewController: UIViewController {
 
-  @IBOutlet private weak var tableView: UITableView!
-
   //MARK: - Properties
   private var cats: [CatData] = []
+  var tableView = UITableView()
 
   //MARK: - Override Methods
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.tableView.delegate = self
-    self.tableView.dataSource = self
-
-    self.tableView.register(UINib(nibName: Setup.CatTableViewCell, bundle: nil), forCellReuseIdentifier: Setup.CatTableViewCell)
-
+    tableView = UITableView(frame: self.view.bounds, style: UITableView.Style.plain)
+    tableView.dataSource = self
+    tableView.delegate = self
+    tableView.backgroundColor = #colorLiteral(red: 0.04932049662, green: 0.3799920082, blue: 0.4390093386, alpha: 1)
+    tableView.register(UINib(nibName: Setup.CatTableViewCell, bundle: nil), forCellReuseIdentifier: Setup.CatTableViewCell)
+    view.addSubview(tableView)
     self.fetchData()
   }
 
@@ -40,10 +40,9 @@ class ViewController: UIViewController {
 //MARK: -- UITableViewDelegate
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Setup.CatViewController) as? CatViewController {
-      vc.cat = cats[indexPath.row]
-      present(vc, animated: false, completion: nil)
-    }
+    let nextVC = CatViewController()
+    nextVC.cat = cats[indexPath.row]
+    self.navigationController?.pushViewController(nextVC, animated: true)
   }
 }
 
