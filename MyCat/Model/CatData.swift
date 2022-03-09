@@ -12,7 +12,6 @@ struct CatData: Decodable {
     let temperament: String
     let description: String
     let image: Image?
-    
 }
 
 struct Image: Codable{

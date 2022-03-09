@@ -16,5 +16,5 @@ class Requests {
         completion(data)
       }
     }
-  }
+  }  
 }
